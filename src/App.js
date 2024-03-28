@@ -7,7 +7,8 @@ import Post from './pages/Post';
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { loeUudised } from "./uudised"
 
 function App() {
   const [postitused, setPostitused] = useState([
@@ -33,6 +34,15 @@ function App() {
       `
     },
   ]);
+
+  useEffect(() => {
+    const tootle = async () => {
+     const {authors, blogPosts} = await loeUudised()
+     setPostitused(blogPosts)
+    }
+    tootle()
+      
+  }, [])
 
   return (
     <BrowserRouter>
