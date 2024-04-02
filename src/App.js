@@ -11,29 +11,7 @@ import {useState, useEffect} from "react"
 import { loeUudised } from "./uudised"
 
 function App() {
-  const [postitused, setPostitused] = useState([
-    {
-      id: '4rrffkd455',
-      title: 'Minu esimene blogipostitus',
-      content: `
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et lorem vestibulum, laoreet massa eget, facilisis nulla. Donec nisi sem, placerat nec urna at, feugiat vulputate tortor. Mauris sed massa nec nisl faucibus aliquet. Maecenas eget semper odio, vel varius eros. Suspendisse libero enim, venenatis ac aliquet et, aliquam at ligula. Nunc ut consequat sapien. Suspendisse egestas arcu vitae nunc consequat, ac laoreet eros rhoncus. Donec lacus lacus, euismod in gravida ac, tempus at urna. Curabitur consectetur, purus ut vestibulum venenatis, quam ipsum auctor lacus,
-      `
-    },
-    {
-      id: 'uytuythjgjhg',
-      title: 'Minu teine blogipostitus',
-      content: `
-      Curabitur non sem efficitur, hendrerit quam ac, malesuada purus. Integer ultricies tempor odio. Integer maximus erat ac lorem pellentesque imperdiet. Fusce vulputate, quam ac dapibus dapibus, felis erat convallis augue, ac ornare lacus lacus ut odio. Nunc euismod velit id lectus mollis laoreet eget eu ante. Curabitur consequat odio ac risus faucibus, nec commodo mi posuere. Ut gravida sit amet nisl eu condimentum. Vivamus a leo quis libero dictum elementum sit amet et ligula.
-      `
-    },
-    {
-      id: 'ytuytuytu',
-      title: 'Minu kolmas blogipostitus',
-      content: `
-      Pellentesque volutpat porttitor orci vitae ultricies. Duis sed diam arcu. Phasellus enim mauris, cursus eu diam id, dignissim ultrices purus. Nullam aliquam posuere augue, rhoncus hendrerit ligula aliquam quis. In interdum felis aliquam nisi egestas dictum. Vivamus tortor turpis, posuere sit amet nisi non, maximus viverra nibh. Mauris euismod lacus id velit viverra, vel condimentum nunc semper. Etiam ornare posuere eros et pellentesque. Nam nec eros elementum nisi convallis lobortis. Fusce eros quam, pharetra at felis et, tincidunt porttitor nulla.
-      `
-    },
-  ]);
+  const [postitused, setPostitused] = useState([]);
 
   useEffect(() => {
     const tootle = async () => {

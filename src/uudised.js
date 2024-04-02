@@ -9,6 +9,7 @@ async function loeUudised() {
     const result = await fetch(apiUrl + apiAadress)
     const andmed = await result.json()
 
+    console.log('All fetched data');
     console.log(andmed);
 
     const kasOnOtsitavItem = (otsitavTyyp, item) => {
@@ -46,13 +47,12 @@ async function loeUudised() {
     const blogPosts = andmed.items
     .filter((item) => kasOnOtsitavItem('postitus', item))
     .map((element) => ({
-        author: element.fields.autor,
+        author: element.fields.autor.sys.id,
         date: element.fields.kuupaev,
         headerImage: images[element.fields.paisepilt.sys.id],
         title: element.fields.pealkiri,
-        //blurb: element.fields.sisukokkuvte,
+        blurb: element.fields.sisukokkuvte,
         content: element.fields.sisu,
-        //content: element.fields.sisukokkuvte,
         id: element.sys.id,
 
     }))
